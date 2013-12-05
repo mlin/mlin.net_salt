@@ -1,7 +1,7 @@
 sumocollector:
-  require:
-  - file: /etc/sumo.conf
   pkg.installed:
+  - require:
+    - file: /etc/sumo.conf
   - sources:
     - sumocollector: "https://collectors.sumologic.com/rest/download/deb/64"
 
