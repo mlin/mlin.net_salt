@@ -8,7 +8,8 @@ nginx:
       - file: /etc/nginx/nginx.conf
 
 /etc/nginx/nginx.conf:
-  - file.exists
+  file:
+  - exists
 
 /home/mlin/www:
   file.directory:
