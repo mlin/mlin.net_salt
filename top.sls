@@ -1,5 +1,5 @@
 base:
-  'www':
+  'www.*':
     less:
       pkg:
         -installed
