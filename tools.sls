@@ -8,4 +8,5 @@ dstat:
 
 libpam-google-authenticator:
   pkg:
+    - fromrepo: testing
     - installed
