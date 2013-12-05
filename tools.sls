@@ -5,8 +5,3 @@ less:
 dstat:
   pkg:
     - installed
-
-libpam-google-authenticator:
-  pkg:
-    - fromrepo: testing
-    - installed
