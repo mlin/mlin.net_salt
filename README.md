@@ -11,6 +11,8 @@ dpkg -i ${GA_DEB_FN}
 su -l mlin -c google-authenticator
 echo auth required pam_google_authenticator.so >> /etc/pam.d/sshd
 sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/' /etc/ssh/sshd_config
+sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+echo AllowUsers mlin >> /etc/ssh/sshd_config
 service ssh restart
 ```
 
