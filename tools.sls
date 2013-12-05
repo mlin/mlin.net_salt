@@ -2,4 +2,5 @@
 {{ p }}:
   pkg:
     -installed
+
 {% endfor %}
