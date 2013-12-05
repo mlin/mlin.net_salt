@@ -53,3 +53,17 @@ salt-call --local sys.doc | less
 - udp:60000-61000 (mosh)
 - tcp:80,443 (www)
 
+### Sumo Collector
+
+Deploy `/etc/sumo.conf`:
+
+```
+accessid=xxxx
+accesskey=xxxx
+```
+
+Run:
+
+```
+salt-call --local state.sls sumocollector
+```
