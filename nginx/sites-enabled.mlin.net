@@ -24,7 +24,7 @@ server {
 	root /home/mlin/www;
 	index index.html index.htm;
 
-	server_name mlin.net www.mlin.net shaped-network-420.mlin.net;
+	server_name www.mlin.net shaped-network-420.mlin.net;
 
 	location / {
 		# First attempt to serve request as file, then
@@ -76,6 +76,13 @@ server {
 	#location ~ /\.ht {
 	#	deny all;
 	#}
+}
+
+# redirect http://mlin.net to http://www.mlin.net
+server {
+        listen 80;
+        server_name mlin.net;
+        return 301 $scheme://www.mlin.net$request_uri;
 }
 
 
