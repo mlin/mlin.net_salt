@@ -7,6 +7,9 @@ nginx:
       - pkg: nginx
       - file: /etc/nginx/nginx.conf
 
+/etc/nginx/nginx.conf:
+  - file.exists
+
 /home/mlin/www:
   file.directory:
   - user: mlin
