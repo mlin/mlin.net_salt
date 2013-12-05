@@ -1,7 +1,7 @@
 less:
   pkg:
-    -installed
+    - installed
 
 dstat:
   pkg:
-    -installed
+    - installed
