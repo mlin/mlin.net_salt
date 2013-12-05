@@ -1,3 +1,3 @@
 base:
   'www.*':
-  	- tools
+    - tools
