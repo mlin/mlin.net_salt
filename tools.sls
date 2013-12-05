@@ -1,4 +1,4 @@
-{% for p in ['less', 'dstat', 'tmux', 'mosh', 'srm'] %}
+{% for p in ['less', 'dstat', 'tmux', 'mosh', 'secure-delete'] %}
 {{ p }}:
   pkg:
     - installed
