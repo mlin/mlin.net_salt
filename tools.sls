@@ -1,11 +1,5 @@
-less:
+{% for p in ['less', 'dstat', 'tmux' 'mosh'] %}
+{{ p }}:
   pkg:
-    - installed
-
-dstat:
-  pkg:
-    - installed
-
-tmux:
-  pkg:
-    - installed
+    -installed
+{% endfor %}
