@@ -1,4 +1,4 @@
-# Enable 2FA
+### Enable 2FA
 
 [Set up ssh key](https://developers.google.com/compute/docs/console#sshkeys), connect and open interactive session as root:
 
@@ -14,7 +14,7 @@ sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes
 service ssh restart
 ```
 
-# Masterless bootstrap
+### Masterless bootstrap
 
 ```
 sudo bash -e -c "wget -O - http://bootstrap.saltstack.org | sh
@@ -22,7 +22,7 @@ git clone https://github.com/mlin/mlin.net_salt.git /srv/salt
 salt-call --local state.highstate"
 ```
 
-# Update
+### Update
 
 ```
 sudo bash -e -c "cd /srv/salt
@@ -32,7 +32,7 @@ git reset --hard origin/master
 salt-call --local state.highstate"
 ```
 
-# Checking on things
+### Checking on things
 
 ```
 salt-call --local state.show_highstate
@@ -44,3 +44,10 @@ salt-call help:
 ```
 salt-call --local sys.doc | less
 ```
+
+### Firewall
+
+- tcp:22 (ssh)
+- udp:60000-61000 (mosh)
+- tcp:80,443 (www)
+
