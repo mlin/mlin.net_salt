@@ -31,3 +31,16 @@ git fetch origin
 git reset --hard origin/master
 salt-call --local state.highstate"
 ```
+
+# Checking on things
+
+```
+salt-call --local state.show_highstate
+salt-call --local pillar.items
+```
+
+salt-call help:
+
+```
+salt-call --local sys.doc | less
+```

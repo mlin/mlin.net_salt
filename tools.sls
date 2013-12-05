@@ -5,3 +5,7 @@ less:
 dstat:
   pkg:
     - installed
+
+tmux:
+  pkg:
+    - installed
