@@ -1,4 +1,6 @@
 unattended-upgrades: 
+  pkg.installed: 
+  - name: unattended-upgrades
   debconf.set: 
   - name: unattended-upgrades 
   - data: 
@@ -7,5 +9,3 @@ unattended-upgrades:
   - name: dpkg-reconfigure -fnoninteractive unattended-upgrades 
   - watch: 
     - debconf: unattended-upgrades 
-  pkg.installed: 
-  - name: unattended-upgrades
