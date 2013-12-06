@@ -7,7 +7,7 @@ passwd mlin
 apt-get install libqrencode3
 GA_DEB_FN="libpam-google-authenticator_20130529-2_amd64.deb"
 wget http://http.us.debian.org/debian/pool/main/g/google-authenticator/${GA_DEB_FN} -O /tmp/${GA_DEB_FN}
-dpkg -i ${GA_DEB_FN}
+dpkg -i /tmp/${GA_DEB_FN}
 su -l mlin -c google-authenticator
 echo auth required pam_google_authenticator.so >> /etc/pam.d/sshd
 sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/' /etc/ssh/sshd_config
