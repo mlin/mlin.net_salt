@@ -4,7 +4,7 @@ unattended-upgrades:
   debconf.set: 
   - name: unattended-upgrades 
   - data: 
-        'unattended-upgrades/enable_auto_updates': {'type': 'boolean', 'value':  True} 
+        'unattended-upgrades/enable_auto_updates': {'type': 'boolean', 'value': 'true'} 
   cmd.run: 
   - name: dpkg-reconfigure -fnoninteractive unattended-upgrades 
   - watch: 
